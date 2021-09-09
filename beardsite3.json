@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.4",
+    "contentVersion": "1.0.0.5",
     "parameters": {
         "virtualMachines_backendSERVER_name": {
             "defaultValue": "backendSERVER",
@@ -196,7 +196,7 @@
         {
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2019-07-01",
-            "name": "[backendpip('backendpip')]",
+            "name": "[variables('backendpip')]",
             "location": "[resourceGroup().location]",
             "tags": {
                 "BeardSite": "[resourceGroup().location]"
